@@ -1,8 +1,10 @@
+server:
+  port: 8082  # Define a porta que a aplicação irá rodar
 spring:
     datasource:
         url: jdbc:h2:mem:claro2024
         username: claro2024
-        password:
+        password: ""  # Senha explicitamente vazia
     jpa:
         show-sql: true
         open-in-view: false
@@ -10,11 +12,12 @@ spring:
             ddl-auto: create # validade | update | create | create-drop
         properties:
             hibernate:
-                format_sql: true
+                format-sql: true
     h2:
         console:
             enabled: true
             path: /h2-console
             settings:
-                trace: false
+                trace: false    
                 web-allow-others: false
+                

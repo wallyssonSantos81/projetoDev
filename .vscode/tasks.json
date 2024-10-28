@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+      {
+          "label": "Compilar Projeto",
+          "type": "shell",
+          "command": ".\\gradlew build",  // Correção para Windows
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          },
+          "problemMatcher": []
+      }
+  ]
+}
