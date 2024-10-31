@@ -1,36 +1,29 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-        "version": "0.2.0",
-        "configurations": [
-            
-            
-            {
-                "type": "java",
-                "name": "Current File",
-                "request": "launch",
-                "mainClass": "${file}"
-            },
-            {
-                "type": "java",
-                "name": "Application",
-                "request": "launch",
-                "mainClass": "dio.me.claro_dev_week_2024.Application",
-                "projectName": "claro-dev-week-2024"
-            },
-            {
-                "type": "java",
-                "name": "Executar com dev.yml",
-                "request": "launch",
-                "mainClass": "dio.me.claro_dev_week_2024.Application",
-                "vmArgs": "-Dspring.profiles.active=dev",
-                "env": {
-                    "SPRING_CONFIG_LOCATION": "${workspaceFolder}/claro-dev-week-2024/src/main/resources/application-dev.yml"
-                },
-                "preLaunchTask": "Compilar Projeto"
-            }
-        ]
-    }
-    
-
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "java",
+        "name": "Executar com Banco Local",
+        "request": "launch",
+        "mainClass": "dio.me.claro_dev_week_2024.Application",
+        "env": {
+          "SPRING_PROFILES_ACTIVE": "dev"
+        }
+      },
+      {
+        "type": "java",
+        "name": "Executar com Banco em Nuvem",
+        "request": "launch",
+        "mainClass": "dio.me.claro_dev_week_2024.Application",
+        "env": {
+          "SPRING_PROFILES_ACTIVE": "postgres",
+          "PGHOST": "postgres-c-zt.railway.internal",
+          "PGPORT": "5432",
+          "PGDATABASE": "railway",
+          "PGUSER": "postgres",
+          "PGPASSWORD": "pbchHrmZvUhgveOCRuljhfgHanAaYGtE"
+        }
+      }
+    ]
+  }
+  

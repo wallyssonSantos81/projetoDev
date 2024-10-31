@@ -1,0 +1,20 @@
+version: "0.2.0"
+configurations:
+  - name: "Executar com Banco Local"
+    type: "java"
+    request: "launch"
+    mainClass: "dio.me.claro_dev_week_2024.Application"
+    env:
+      SPRING_PROFILES_ACTIVE: dev
+
+  - name: "Executar com Banco em Nuvem"
+    type: "java"
+    request: "launch"
+    mainClass: "dio.me.claro_dev_week_2024.Application"
+    env:
+      SPRING_PROFILES_ACTIVE: postgres
+      PGHOST: "postgres-c-zt.railway.internal"
+      PGPORT: "5432"
+      PGDATABASE: "railway"
+      PGUSER: "postgres"
+      PGPASSWORD: "pbchHrmZvUhgveOCRuljhfgHanAaYGtE"

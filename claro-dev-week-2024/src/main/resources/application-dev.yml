@@ -1,5 +1,6 @@
 server:
   port: 8082  # Define a porta que a aplicação irá rodar
+
 spring:
     datasource:
         url: jdbc:h2:mem:claro2024
